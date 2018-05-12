@@ -2,6 +2,12 @@
 
 namespace BattleCore.Core.ServiceLocator
 {
+    /// <summary>
+    /// A service reference is the middle man
+    /// in which a third party class interacts
+    /// with a registered service.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
 	public class ServiceReference<T> where T: class
 	{
 		#region Public Variables

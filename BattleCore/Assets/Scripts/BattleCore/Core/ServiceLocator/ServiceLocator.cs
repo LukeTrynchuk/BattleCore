@@ -5,10 +5,27 @@ using System;
 
 namespace BattleCore.Core.ServiceLocator
 {
+    /// <summary>
+    /// The service locator is responsible for 
+    /// holding references to different types of 
+    /// services and invoking callback functions when
+    /// the services are registered.
+    /// </summary>
 	public sealed class ServiceLocator 
 	{
-		#region Private Variables
-		private static ServiceLocator                       m_instance;
+        #region Public Variables
+        public static ServiceLocator Instance
+        {
+            get
+            {
+                Initialize();
+                return m_instance;
+            }
+        }
+        #endregion
+
+        #region Private Variables
+        private static ServiceLocator                       m_instance;
 		private static Dictionary <string, object>          m_servicesDictionary;
 		private static Dictionary <string, List<Action>>    m_callbackHandles;
 		#endregion

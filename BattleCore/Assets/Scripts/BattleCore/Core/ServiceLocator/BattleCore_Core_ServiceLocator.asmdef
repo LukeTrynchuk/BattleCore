@@ -1,0 +1,8 @@
+{
+    "name": "BattleCore_Core_ServiceLocator",
+    "references": [],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
